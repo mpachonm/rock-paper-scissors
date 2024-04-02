@@ -1,2 +1,1 @@
-# rock-paper-scissors
-Rock paper scissors project
+In this project I'll create a rock paper scissors game using javascript!
