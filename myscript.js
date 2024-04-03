@@ -35,6 +35,20 @@ function playRound(playerSelection, computerSelection) {
     else return "Choice not possible";
   }
 
-const playerSelection = prompt("Please enter rock, paper or scissors:").toLowerCase();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function playGame(){
+
+    var rounds=0;
+    for (let i=0;i<5;i++) {
+        let playerSelection = prompt("Please enter rock, paper or scissors:").toLowerCase();
+        let computerSelection = getComputerChoice();
+        let game=playRound(playerSelection, computerSelection);
+        console.log(game);
+        if (game.includes("win")){
+            rounds++;
+          }
+      }
+    if (rounds>=3){
+        console.log("You won");
+    } else console.log("You lost");
+}
+playGame();
